@@ -8,6 +8,9 @@
 <body>
     <h2>Fomulario de Contacto</h2>
     <form action="guardar_contacto.php" method="post">
+        <label for="codigo">Codigo</label>
+        <input type="text" name="codigo" id="codigo">
+        
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombre" id="nombre" required>
         <br><br>

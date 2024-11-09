@@ -2,18 +2,20 @@
 //Verifica si el fomularo fue enviado
 if($_SERVER["REQUEST_METHOD"]=="POST"){
     //Obtener los datos del furmulario
+    $codigo = htmlspecialchars($_POST["codigo"]);
     $nombre = htmlspecialchars($_POST["nombre"]);
     $correo = htmlspecialchars($_POST["correo"]);
     $celular = htmlspecialchars($_POST["celular"]);
     $mensaje = htmlspecialchars($_POST["mensaje"]);
 
+    echo($codigo)."<br>";
     echo($nombre)."<br>";
     echo($correo)."<br>";
     echo($celular)."<br>";
     echo($mensaje)."<br>";
 
     //Formatear los datos para guardar en el archivo
-    $datos = "Nombre: $nombre\nCorreo: $correo\nCelular: $celular\nMensaje: $mensaje\n--------------------------\n";
+    $datos = "Codigo: $codigo\nNombre: $nombre\nCorreo: $correo\nCelular: $celular\nMensaje: $mensaje\n--------------------------\n";
     //Intentar abri el archivo en modo append
     $archivo = fopen("contacto.txt","a");
     if($archivo){
