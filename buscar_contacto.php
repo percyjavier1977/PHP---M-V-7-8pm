@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $encontrado = true;
                 echo "<h2>Datos del Contacto:</h2>";
                 echo nl2br(htmlspecialchars(trim($bloque))); // Limpia, escapa y formatea el bloque
-                break;
+                break; //Cerrar el bucle
             }
         }
         
